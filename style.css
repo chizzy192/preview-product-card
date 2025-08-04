@@ -48,7 +48,7 @@ body {
 }
 
 main {
-    width: clamp(25em, 42vw, 70em);
+    width: clamp(24em, 42vw, 70em);
     height: 52rem;
     margin: clamp(5rem, 12vw, 30rem) auto;
     display: flex;
@@ -63,7 +63,7 @@ main {
 }
 
 #product-image img {
-    width: 25em;
+    width: 24em;
     height: 100%;
     border-radius: 10px 10px 0px 0px;  
 }
@@ -73,7 +73,7 @@ main {
 }
 
 #product-details {
-    width: clamp(25em, 50vw, 70em);
+    width: clamp(24em, 50vw, 70em);
     display: flex;
     flex-direction: column;
     padding: clamp(2.2rem, 2.3vw, 2.2rem) clamp(2.2rem, 2.3vw, 2.5rem);
