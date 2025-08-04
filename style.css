@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "Fraunces-bold";
+    src: url('assets/Fraunces/static/Fraunces_72pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-medium";
+    src: url('assets/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-bold";
+    src: url('assets/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --Green-500: hsl(158, 36%, 37%);
+    --Green-700: hsl(158, 42%, 18%);
+    --Black: hsl(212, 21%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+main {
+    width: clamp(25em, 42vw, 70em);
+    height: 52rem;
+    margin: clamp(5rem, 12vw, 30rem) auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+#product-image {
+    height: 24.4rem;
+}
+
+#product-image img {
+    width: 25em;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;  
+}
+
+#product-image-desktop img {
+    display: none;
+}
+
+#product-details {
+    width: clamp(25em, 50vw, 70em);
+    display: flex;
+    flex-direction: column;
+    padding: clamp(2.2rem, 2.3vw, 2.2rem) clamp(2.2rem, 2.3vw, 2.5rem);
+    gap: 1.5rem;
+}
+
+#product {
+    text-transform: uppercase;
+    font-family: "Montserrat-medium", sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.5em;
+}
+
+#product-details h1 {
+    font-family: "Fraunces-bold", serif;
+    font-size: 2.5em;
+    padding: 0;
+    line-height: 1;
+    color: var(--Black);
+}
+
+#product-description {
+    font-family: "Montserrat-medium", sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+
+}
+
+#product, #product-description {
+    color: var(--Grey);
+}
+
+#prices {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.price {
+    font-family: "Fraunces-bold", serif;
+    font-size: 2.5em;
+    color: var(--Green-500);
+    line-height: 1;
+}
+
+.old-price {
+    font-family: "Montserrat-medium", sans-serif;
+    font-size: 1.2em;
+    color: var(--Grey);
+    text-decoration: line-through;
+    line-height: 1;
+}
+
+.add-to-cart img {
+    width: 2em;
+}
+
+.add-to-cart {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--White);
+    background-color: var(--Green-500);
+    border-radius: 0.5rem;
+    border: none;
+    font-family: "Montserrat-bold", sans-serif;
+}
+
+.add-to-cart:hover {
+    background-color: var(--Green-700);
+}
+.add-to-cart:active {
+    background-color: var(--Green-500);
+}
+@media screen and (min-width: 730px) {
+      main {
+        width: clamp(40em, 42vw, 70em);
+        height: 25rem;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+    #product-image-desktop {
+        width: clamp(20em, 21vw, 35em);
+        height: 100%;
+    }
+    #product-image img {
+        display: none;
+    }
+
+    #product-image-desktop img {
+        display: inline;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+     #product-details {
+        display: flex;
+        width: clamp(20em, 21vw, 35em);
+        gap: 0.5rem;
+        padding: 0.7rem 2.2rem;
+    }
+
+ 
+}
+
+@media screen and (min-width: 1240px) {
+    main {
+        height: 30rem;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+    #product-image-desktop {
+        width: 21vw;
+        height: 100%;
+    }
+    #product-image img {
+        display: none;
+    }
+    #product-image-desktop img {
+        display: inline;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    #product-details {
+        display: flex;
+        width: 50%;
+        padding: 2.05rem 2.2rem;
+        gap:1.5rem;
+    }
+    
+}
+
+
