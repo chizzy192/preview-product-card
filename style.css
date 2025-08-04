@@ -128,7 +128,7 @@ main {
 }
 
 .add-to-cart img {
-    width: 2em;
+    width: 1em;
 }
 
 .add-to-cart {
@@ -148,9 +148,11 @@ main {
 .add-to-cart:hover {
     background-color: var(--Green-700);
 }
+
 .add-to-cart:active {
     background-color: var(--Green-500);
 }
+
 @media screen and (min-width: 730px) {
       main {
         width: clamp(40em, 42vw, 70em);
